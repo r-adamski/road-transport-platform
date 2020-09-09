@@ -19,16 +19,16 @@ if(isset($_POST['type'], $_SESSION['logged'], $_POST['id'])){
     	
 	$amount = $kwota*100;
 	$session_id = getPaymentId();
-	$merchant_id = "56303";
-	$pos_id = "56303";
+	$merchant_id = "----------";
+	$pos_id = "-----------";
 	$currency = "PLN";
-	$desc = "Doladowanie konta CSGOKeys.pl";
+	$desc = "Doladowanie konta -----";
 	$country = "PL";
 	$email = getEmail($_SESSION['id']);
-	$url_return = "http://csgokeys.pl";
-	$url_status = "http://csgokeys.pl/php/p24.php";
+	$url_return = "---------";
+	$url_status = "----------------";
 	$api_version = "3.2";
-	$crc = "b9c1fd6986a981d7";
+	$crc = "-------------";
 	$code = $session_id."|".$merchant_id."|".$amount."|".$currency."|".$crc;
 	$sign = md5($code);
 	
